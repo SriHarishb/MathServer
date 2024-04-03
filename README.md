@@ -32,6 +32,7 @@ Publish the website in the given URL.
 ## PROGRAM :
 
 ### math.html
+```
 <!DOCTYPE html>
 <html lang="en">
 <head> 
@@ -117,10 +118,10 @@ Publish the website in the given URL.
     </div>
 </body>
 </html>
-
+```
 
 ### views.py
-
+```
 from django.shortcuts import render
 
 def surfacerightcylarea(request):
@@ -146,9 +147,9 @@ def surfacerightcylarea(request):
         print('surface area =', surfacearea)
         
     return render(request, 'mathapp/math.html', context)
-
+```
 ### urls.py
-
+```
 from django.contrib import admin
 from django.urls import path
 from mathapp import views
@@ -157,8 +158,7 @@ urlpatterns = [
     path('areaofrectangle/',views.surfacerightcylarea,name="surfaceareaofrightanglecylinder"),
     path('',views.surfacerightcylarea,name="surfaceareaofrightanglecylinderroot")
 ]
-
-
+```
 ## SERVER SIDE PROCESSING:
 
 ![alt text](serverside.png)
